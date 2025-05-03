@@ -8,5 +8,5 @@ accelerate launch  --config_file recipes/accelerate_configs/zero3.yaml \
     --max_completion_length=1024 \
     --model_name_or_path=Stardust1956/CPPO-1.5B-n-16-0.875 \
     --dataset_name=openai/gsm8k \
-    --num_generations=16 
+
 

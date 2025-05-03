@@ -1,0 +1,63 @@
+# Model arguments
+model_name_or_path: Qwen/Qwen2.5-7B-Instruct
+model_revision: main
+torch_dtype: bfloat16
+attn_implementation: flash_attention_2
+
+# Data training arguments
+dataset_name: DigitalLearningGmbH/MATH-lighteval
+dataset_config: default
+eval_dataset_names:
+- math500
+- aime24
+- amc23
+
+
+system_prompt: "A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. And the answer should be of the following format: 'Therefore, the final answer is: $\\boxed{{ANSWER}}$. I hope it is correct' (without quotes) where ANSWER is just the final number or expression that solves the problem. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think>\n<answer> answer here </answer>. "
+# GRPO trainer config
+bf16: true
+use_vllm: true
+vllm_device: auto
+vllm_gpu_memory_utilization: 0.7
+do_eval: true
+eval_strategy: steps
+eval_steps: 100
+gradient_accumulation_steps: 1
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+hub_model_id: Qwen-2.5-1.5B-Simple-RL
+hub_strategy: every_save
+learning_rate: 1.0e-06
+log_completions: false 
+log_level: info
+logging_first_step: true
+logging_steps: 10
+logging_strategy: steps
+lr_scheduler_type: cosine
+max_prompt_length: 512
+max_completion_length: 3072
+max_steps: -1
+num_generations: 16
+num_train_epochs: 1
+output_dir: data/Qwen-2.5-7B
+wandb_project: CPPO_math
+overwrite_output_dir: true
+per_device_eval_batch_size: 16
+per_device_train_batch_size: 16
+report_to:
+- wandb
+reward_funcs:
+- accuracy
+- format
+reward_weights:
+- 1.0
+- 1.0
+save_strategy: "no"
+metric_for_best_model: "eval_accuracy"
+save_total_limit: 1
+seed: 42
+warmup_ratio: 0.1
+temperature: 1.0
+num_iterations: 2
+beta: 0.04
