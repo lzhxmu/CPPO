@@ -9,9 +9,6 @@ dataset_name: DigitalLearningGmbH/MATH-lighteval
 dataset_config: default
 eval_dataset_names:
 - math500
-- aime24
-- amc23
-
 
 system_prompt: "A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. And the answer should be of the following format: 'Therefore, the final answer is: $\\boxed{{ANSWER}}$. I hope it is correct' (without quotes) where ANSWER is just the final number or expression that solves the problem. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think>\n<answer> answer here </answer>. "
 # GRPO trainer config

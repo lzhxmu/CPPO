@@ -1126,7 +1126,7 @@ class GRPOTrainer(Trainer):
                             n = 4
                             inference_sampling_params = SamplingParams(
                                 temperature=0.6,
-                                max_tokens=1024,
+                                max_tokens=3072,
                                 top_p=0.95,
                                 guided_decoding=guided_decoding,
                                 n=n,
