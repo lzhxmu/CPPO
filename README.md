@@ -35,7 +35,7 @@ This paper introduces Completion Pruning Policy Optimization (CPPO) to accelerat
 
 ## To Reproduce
 
-### 1. Prepare the environment according to [Open R1](https://github.com/huggingface/open-r1) or :
+### 1. Prepare the environment:
 ```bash
 conda create -n cppo python=3.11
 conda activate cppo
