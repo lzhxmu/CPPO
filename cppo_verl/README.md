@@ -54,6 +54,7 @@ bash recipe/cppo/gsm8k_grpo.sh
 bash recipe/cppo/gsm8k_cppo.sh
 ```
 #### Evaluation
+Before evaluation, convert the model to Hugging Face format using the [conversion script](/cppo_verl/recipe/cppo/convert.sh).
 ```bash
 bash recipe/cppo/gsm8k_eval.sh
 ```
@@ -69,6 +70,7 @@ bash recipe/cppo/math_grpo.sh
 bash recipe/cppo/math_cppo.sh
 ```
 #### Evaluation
+Before evaluation, convert the model to Hugging Face format using the [conversion script](/cppo_verl/recipe/cppo/convert.sh).
 ```bash
 bash recipe/cppo/math_eval.sh
 ```
