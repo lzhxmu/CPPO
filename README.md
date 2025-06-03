@@ -5,8 +5,11 @@
 <a href="https://arxiv.org/abs/2503.22342"> <img src='https://img.shields.io/badge/arXiv-2503.22342-b31b1b.svg'></a> 
 </p>
 
+## News
+- **2025.6.03**: 🔥 We release the [verl version of CPPO](/cppo_verl/README.md).
+
 ## Abstract
-This paper introduces Completion Pruning Policy Optimization (CPPO) to accelerate the training of reasoning models based on Group Relative Policy Optimization (GRPO). GRPO, while effective, incurs high training costs due to the need for sampling multiple completions for each question. Our experiment and theoretical analysis reveals that the number of completions impacts model accuracy yet increases training time multiplicatively, and **not all completions contribute equally to policy training**---t**heir contribution depends on their relative advantage**. To address these issues, we propose CPPO, which prunes completions with low absolute advantages, significantly reducing the number needed for gradient calculation and updates. Additionally, we introduce a dynamic completion allocation strategy to maximize GPU utilization by incorporating additional questions, further enhancing training efficiency. Experimental results demonstrate that CPPO achieves up to **$8.32\times$** speedup on GSM8K and **$3.51\times$** on Math while preserving or even enhancing the accuracy compared to the original GRPO.
+This paper introduces Completion Pruning Policy Optimization (CPPO) to accelerate the training of reasoning models based on Group Relative Policy Optimization (GRPO). GRPO, while effective, incurs high training costs due to the need for sampling multiple completions for each question. Our experiment and theoretical analysis reveals that the number of completions impacts model accuracy yet increases training time multiplicatively, and **not all completions contribute equally to policy training**---**their contribution depends on their relative advantage**. To address these issues, we propose CPPO, which prunes completions with low absolute advantages, significantly reducing the number needed for gradient calculation and updates. Additionally, we introduce a dynamic completion allocation strategy to maximize GPU utilization by incorporating additional questions, further enhancing training efficiency. Experimental results demonstrate that CPPO achieves up to **$8.32\times$** speedup on GSM8K and **$3.51\times$** on Math while preserving or even enhancing the accuracy compared to the original GRPO.
 
 
 ## Main Results
