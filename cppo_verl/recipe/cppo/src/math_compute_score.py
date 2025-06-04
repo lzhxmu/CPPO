@@ -129,7 +129,7 @@ def accuracy_reward(solution_str, ground_truth):
     else:
         # If the gold solution is not parseable, we reward 2 to skip this example
         reward = 2.0
-        print("Failed to parse gold solution: ", ground_truth)
+        # print("Failed to parse gold solution: ", ground_truth)
     return reward
 
 
