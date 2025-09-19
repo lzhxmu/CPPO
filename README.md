@@ -6,6 +6,7 @@
 </p>
 
 ## News
+- **2025.9.19**: 🔥 CPPO has been accepted to NeurIPS'25!
 - **2025.6.03**: 🔥 We release the [verl version of CPPO](/cppo_verl/README.md).
 
 ## Abstract
