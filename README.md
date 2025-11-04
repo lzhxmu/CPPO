@@ -101,6 +101,12 @@ sh scripts/Eval_math.sh
 ```
 You can download the ckpt from <a href="https://huggingface.co/Stardust1956/CPPO-7b-n-16-0.75">huggingface 🤗</a>.
 
+## Affiliation
+
+1. Shanghai Innovation Institute
+2. Xiamen University
+3. Rakuten
+4. East China Normal University
 
 ## Acknowledgments
 We are very grateful to the [Open R1](https://github.com/huggingface/open-r1) teams for creating awesome repo.
